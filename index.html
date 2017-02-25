@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app='directivePractice'>
+  <head>
+    <meta charset="utf-8">
+    <title>Lesson Hider Directive</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body ng-controller='lessonCtrl'>
+<!-- <input ng-model="test" type="text" name="" value=""> -->
+
+<div id="headerText">
+  <h1 class="centerize">{{test}}</h1>
+  <img class="centerize" src="http://techzoomer.com/wp-content/uploads/2011/07/animated-gif.gif" alt="">
+</div>
+
+<ul>
+  <lesson-hider ng-repeat="lesson in lessons track by $index" lesson="lesson" day-alert='announceDay(lesson, day)'></lesson-hider>
+  <!-- This is passing each lesson from the lessons array into our directive's key of lesson. -->
+</ul>
+
+
+
+    <!-- Including angular and ui-router then our javascript files. ORDER MATTERS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script> -->
+
+    <script type="text/javascript" src='./js/app.js'></script>
+    <script type="text/javascript" src='./js/lessonCtrl.js'></script>
+    <script type="text/javascript" src='./js/lessonHider.js'></script>
+    <script type="text/javascript" src='./js/lessonService.js'></script>
+  </body>
+</html>

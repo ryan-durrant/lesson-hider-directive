@@ -1,0 +1,11 @@
+
+
+.centerize {
+  margin: auto;
+}
+
+
+#headerText {
+  display: flex;
+  align-items: center;
+}
