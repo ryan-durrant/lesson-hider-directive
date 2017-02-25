@@ -14,13 +14,15 @@ directivePractice.directive('lessonHider', function(){
         scope.schedule.forEach(function(scheduleElement){
           if(scheduleElement.lesson === scope.lesson){
             scope.lessonDay = scheduleElement.weekday;
-            element.css('text-decoration', 'line-through');
+            element.addClass("liner");
+            // element.css('text-decoration', 'line-through');
             return;
           }
         });
 
         element.bind("click", function() {
-          element.css('text-decoration', 'line-through');
+          element.toggleClass("liner");
+          // element.css('text-decoration', 'line-through');
         });
 
       });
