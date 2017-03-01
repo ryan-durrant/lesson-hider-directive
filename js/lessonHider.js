@@ -4,12 +4,16 @@ directivePractice.directive('lessonHider', function(){
     restrict: 'E',
     scope: {
       lesson: '=',
-      dayAlert: '&'
+      dayAlert: '&',
+      deleteDay: '&'
+      // HOW DO I TELL THAT DAYALERT RUNS ANNOUNCEDAY???
     },
     link: function(scope, element, attrs){
       // console.log(scope, element, attrs);
       scope.getSchedule.then(function(response){
         scope.schedule = response.data;
+
+        // console.log(scope.schedule);
 
         scope.schedule.forEach(function(scheduleElement){
           if(scheduleElement.lesson === scope.lesson){
@@ -24,6 +28,8 @@ directivePractice.directive('lessonHider', function(){
           element.toggleClass("liner");
           // element.css('text-decoration', 'line-through');
         });
+
+
 
       });
     },

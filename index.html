@@ -14,7 +14,7 @@
 </div>
 
 <ul>
-  <lesson-hider ng-repeat="lesson in lessons track by $index" lesson="lesson" day-alert='announceDay(lesson, day)'></lesson-hider>
+  <lesson-hider ng-repeat="lesson in lessons track by $index" lesson="lesson" day-alert='announceDay(lesson, day)' delete-day='removeDay($index)'></lesson-hider>
   <!-- This is passing each lesson from the lessons array into our directive's key of lesson. -->
 </ul>
 

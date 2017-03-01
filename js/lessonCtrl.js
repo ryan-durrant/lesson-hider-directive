@@ -1,4 +1,4 @@
-directivePractice.controller('lessonCtrl', function($scope){
+directivePractice.controller('lessonCtrl', function($scope, lessonService){
   $scope.lessons = [
     'Services',
     'Routing',
@@ -23,4 +23,12 @@ directivePractice.controller('lessonCtrl', function($scope){
     }
     alert(lesson + ' is active on ' + day + '.');
   };
+
+  $scope.removeDay = function(index){
+    // console.log(lesson);
+    console.log(index);
+    $scope.lessons.splice(index, 1);
+    console.log($scope.lessons);
+  };
+
 });
