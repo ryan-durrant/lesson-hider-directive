@@ -24,10 +24,14 @@ directivePractice.directive('lessonHider', function(){
           }
         });
 
-        element.bind("click", function() {
+        // element.bind("click", function() {
+        //   element.toggleClass("liner");
+        //   // element.css('text-decoration', 'line-through');
+        // });
+
+        scope.lineThrough = function(){
           element.toggleClass("liner");
-          // element.css('text-decoration', 'line-through');
-        });
+        };
 
 
 
