@@ -26,9 +26,9 @@ directivePractice.controller('lessonCtrl', function($scope, lessonService){
 
   $scope.removeDay = function(index){
     // console.log(lesson);
-    console.log(index);
+    //console.log(index);
     $scope.lessons.splice(index, 1);
-    console.log($scope.lessons);
+    //console.log($scope.lessons);
   };
 
 });
